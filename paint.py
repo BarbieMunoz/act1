@@ -55,9 +55,24 @@ def circle(start, end):
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    contador = 0
 
+    # contador para cambiar el tamaño de la línea y sea un rectangulo
+    for count in range(4):
+        if contador % 2 == 0:
+            forward(end.x - start.x)
+            left(90)
+        else:
+            forward(end.y - start.y)
+            left(90)
 
+        contador += 1
+
+    
 def triangle(start, end):
     """Draw triangle from start to end."""
     pass  # TODO
