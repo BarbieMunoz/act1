@@ -71,11 +71,23 @@ def rectangle(start, end):
             left(90)
 
         contador += 1
+    end_fill()
 
     
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    # lo importante de esto es cambiar el ángulo para que se cree bien
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
+
 
 
 def tap(x, y):
