@@ -108,7 +108,7 @@ def store(key, value):
     state[key] = value
 
 #declare hexadecimal value for a new lightblue color
-lightBlue = "#9DF4EF"
+light_blue = "#9DF4EF"
 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
@@ -121,7 +121,7 @@ onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 #Use new color with a new binded keybind, passing the string as a parameter for color
-onkey(lambda: color(lightBlue), 'Q')
+onkey(lambda: color(light_blue), 'Q')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
